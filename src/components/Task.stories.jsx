@@ -3,7 +3,7 @@ import Task from './Task';
 
 export default {
   component: Task,
-  title: 'Task',
+  title: 'Components/Task',
   argTypes: {
     onArchiveTask: { action: 'onArchiveTask' },
     onTogglePinTask: { action: 'onTogglePinTask' },

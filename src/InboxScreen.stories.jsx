@@ -8,7 +8,7 @@ import { expect, findByRole, userEvent, within } from "@storybook/test";
 
 export default {
   component: InboxScreen,
-  title: 'InboxScreen',
+  title: 'Features/InboxScreen',
 };
 
 export const Default = {
@@ -89,5 +89,25 @@ export const EditTask = {
     await expect(taskInput.value).toBe(
       'Fix bug in input error state and disabled state'
     );
+  },
+};
+
+
+export const DeleteTask = {
+  parameters: {
+    ...Default.parameters,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const getTask = (id) => canvas.findByRole('listitem', { name: id });
+
+    const itemToDelete = await getTask('task-1');
+    const deleteButton = await findByRole(itemToDelete, 'button', {
+      name: 'delete',
+    });
+
+    // Click the pin button
+    await userEvent.click(deleteButton);
+    await expect(canvas.getAllByRole('listitem').length).toBe(5);
   },
 };

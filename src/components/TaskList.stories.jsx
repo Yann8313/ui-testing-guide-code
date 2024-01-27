@@ -5,7 +5,7 @@ import * as TaskStories from './Task.stories';
 
 export default {
   component: TaskList,
-  title: 'TaskList',
+  title: 'Components/TaskList',
   argTypes: {
     ...TaskStories.argTypes,
   },
