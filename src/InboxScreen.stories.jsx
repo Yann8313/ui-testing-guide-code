@@ -8,7 +8,7 @@ import { expect, findByRole, userEvent, within } from "@storybook/test";
 
 export default {
   component: InboxScreen,
-  title: 'InboxScreen',
+  title: 'Features/InboxScreen',
 };
 
 export const Default = {
