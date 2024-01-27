@@ -19,7 +19,6 @@ describe('The Login Page', () => {
     });
   });
 
-  // Comments
   it('user can authenticate using the login form', () => {
     const email = 'alice.carr@test.com';
     const password = 'k12h1k0$5;lpa@Afn';

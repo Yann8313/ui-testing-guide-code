@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies if cache invalid
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn
-  # Run interaction and accessibility tests
-  interaction-and-accessibility:
+  # Run interaction
+  interaction:
     runs-on: ubuntu-latest
     needs: install-cache
     steps:
